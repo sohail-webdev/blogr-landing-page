@@ -98,6 +98,7 @@ a {
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: 250%;
+  border-bottom-left-radius: 10rem;
 }
 /* Header */
 .header {
