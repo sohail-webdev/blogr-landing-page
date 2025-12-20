@@ -1,6 +1,6 @@
 const dropdowns = [
-  { id: 1, title: "Product", options: ["Features", "Integrations", "Pricing"] },
-  { id: 2, title: "Company", options: ["About Us", "Careers", "Our Team"] },
+  { id: 1, title: "Product", options: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"] },
+  { id: 2, title: "Company", options: ["About", "Team", "Blog", "Careers"] },
   { id: 3, title: "Connect", options: ["Contact", "Newsletter", "LinkedIn"] },
 ];
 
