@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Editor from "./components/Editor";
 
 function App() {
   const [visibleDropdownId, setVisibleDropdownId] = useState(null);
@@ -20,6 +21,7 @@ function App() {
         <Header visibleDropdownId={visibleDropdownId} toggle_visible_dropdown_id={toggle_visible_dropdown_id} />
         <Hero />
       </div>
+      <Editor />
     </>
   );
 }

@@ -46,7 +46,7 @@
   --hero-background-gradient: hsl(13, 100%, 72%), hsl(353, 100%, 62%); /* orange-300 -> red-550 */
   --body-background-gradient: hsl(237, 17%, 21%), hsl(237, 23%, 31%); /* purple-950 -> purple-900 */
   /*  */
-  --x-padding: 10vw;
+  --x-padding: 12vw;
   --font-family-overpass-300: "overpass-300", Arial, Helvetica, sans-serif;
   --font-family-overpass-600: "overpass-600", Arial, Helvetica, sans-serif;
   --font-family-ubuntu-400: "ubuntu-400", Arial, Helvetica, sans-serif;
@@ -212,4 +212,48 @@ a {
 }
 .hero-buttons-container > .hero-secondary-button {
   border-color: var(--color-neutral-white);
+}
+
+/* Editor Section */
+.section-editor {
+  height: 120vh;
+  color: var(--color-primary-blue-900);
+  padding: 0 var(--x-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  background-image: url(./assets/images/illustration-editor-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 100% right -50%;
+  background-size: 60%;
+  margin-top: 5rem;
+}
+.section-editor > h2 {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  font-family: var(--font-family-overpass-300);
+}
+
+.editor-content,
+.editor-content-sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.editor-content {
+  gap: 4rem;
+}
+.editor-content-sub-section > h3 {
+  font-family: var(--font-family-overpass-300);
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+}
+.editor-content-sub-section > p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: var(--color-neutral-gray-600);
+  max-width: 50%;
+  opacity: 0.8;
 }
