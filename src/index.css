@@ -1,7 +1,7 @@
 @font-face {
   font-family: "overpass-300";
   src: url("./assets/fonts/overpass-300.woff2") format("woff2");
-  font-weight: 600;
+  font-weight: 300;
 }
 @font-face {
   font-family: "overpass-600";
@@ -11,17 +11,17 @@
 @font-face {
   font-family: "ubuntu-400";
   src: url("./assets/fonts/ubuntu-400.woff2") format("woff2");
-  font-weight: 600;
+  font-weight: 400;
 }
 @font-face {
   font-family: "ubuntu-500";
   src: url("./assets/fonts/ubuntu-500.woff2") format("woff2");
-  font-weight: 600;
+  font-weight: 500;
 }
 @font-face {
   font-family: "ubuntu-700";
   src: url("./assets/fonts/ubuntu-700.woff2") format("woff2");
-  font-weight: 600;
+  font-weight: 700;
 }
 
 *,
@@ -70,6 +70,7 @@ a {
   border: none;
   font: inherit;
   color: inherit;
+  cursor: pointer;
 }
 /*  */
 #root {
@@ -83,7 +84,7 @@ a {
   background-image: linear-gradient(to bottom right, var(--hero-background-gradient));
   height: 80vh;
   border-bottom-left-radius: 10rem;
-  padding: 5rem var(--x-padding);
+  padding: 3.5rem var(--x-padding);
 }
 .header {
   display: flex;
@@ -116,6 +117,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
   gap: 0.6rem;
 }
 .header-dropdown-arrow-icon {
@@ -139,4 +142,20 @@ a {
 .header-dropdown.visible > .header-dropdown-options-container {
   display: flex;
   flex-direction: column;
+}
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.header-buttons > * {
+  padding: 1rem 2.5rem;
+  border-radius: 10rem;
+}
+.header-login-button {
+  opacity: 0.9;
+}
+.header-signup-button {
+  background-color: rgba(255, 255, 255);
+  color: var(--color-primary-red-500);
+  font-weight: bold;
 }
