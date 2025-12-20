@@ -257,3 +257,52 @@ a {
   max-width: 50%;
   opacity: 0.8;
 }
+
+/* Speed Info Section */
+.section-speed {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-speed-circle-illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: top 80% left -60%;
+}
+.section-speed-circle-illustration ~ * {
+  position: relative;
+  z-index: 1;
+}
+.section-speed-content-container {
+  position: relative;
+  background-image: linear-gradient(to right, var(--body-background-gradient));
+  height: 50%;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--x-padding);
+}
+.section-speed-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.section-speed-content > h2 {
+  font-family: var(--font-family-overpass-300);
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+}
+.section-speed-content > p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  opacity: 0.8;
+}

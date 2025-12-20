@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Editor from "./components/Editor";
+import Speed from "./components/Speed";
 
 function App() {
   const [visibleDropdownId, setVisibleDropdownId] = useState(null);
@@ -22,6 +23,7 @@ function App() {
         <Hero />
       </div>
       <Editor />
+      <Speed />
     </>
   );
 }
