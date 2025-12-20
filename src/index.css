@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "overpass-300";
+  src: url("./assets/fonts/overpass-300.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "overpass-600";
+  src: url("./assets/fonts/overpass-600.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ubuntu-400";
+  src: url("./assets/fonts/ubuntu-400.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ubuntu-500";
+  src: url("./assets/fonts/ubuntu-500.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "ubuntu-700";
+  src: url("./assets/fonts/ubuntu-700.woff2") format("woff2");
+  font-weight: 600;
+}
+
 *,
 *::before,
 *::after {
@@ -5,8 +31,112 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Variables */
+#root {
+  /* Colors */
+  /* Primary */
+  --color-primary-red-500: hsl(356, 100%, 66%);
+  --color-primary-red-400: hsl(355, 100%, 74%);
+  --color-primary-blue-900: hsl(208, 49%, 24%);
+  /* Neutral */
+  --color-neutral-gray-600: hsl(207, 13%, 34%);
+  --color-neutral-gray-900: hsl(240, 10%, 16%);
+  --color-neutral-white: hsl(0, 100%, 100%);
+  /* Gradient */
+  --hero-background-gradient: hsl(13, 100%, 72%), hsl(353, 100%, 62%); /* orange-300 -> red-550 */
+  --body-background-gradient: hsl(237, 17%, 21%), hsl(237, 23%, 31%); /* purple-950 -> purple-900 */
+  /*  */
+  --x-padding: 10vw;
+  --font-family-overpass-300: "overpass-300", Arial, Helvetica, sans-serif;
+  --font-family-overpass-600: "overpass-600", Arial, Helvetica, sans-serif;
+  --font-family-ubuntu-400: "ubuntu-400", Arial, Helvetica, sans-serif;
+  --font-family-ubuntu-500: "ubuntu-500", Arial, Helvetica, sans-serif;
+  --font-family-ubuntu-700: "ubuntu-700", Arial, Helvetica, sans-serif;
+}
+/* Defaults/Resets */
+html {
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+li,
+a {
+  cursor: pointer;
+}
+.button {
+  background: none;
+  outline: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+/*  */
 #root {
   height: 100vh;
   height: 100dvh;
   width: 100%;
+  color: var(--color-neutral-white);
+  font-family: var(--font-family-ubuntu-400);
+}
+.header-hero-wrapper {
+  background-image: linear-gradient(to bottom right, var(--hero-background-gradient));
+  height: 80vh;
+  border-bottom-left-radius: 10rem;
+  padding: 5rem var(--x-padding);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo-dropdowns-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 3rem;
+}
+.logo {
+  height: 3rem;
+}
+.header-dropdowns-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.header-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+.header-dropdown > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header-dropdown-arrow-icon {
+  height: 0.6rem;
+}
+.header-dropdown-options-container {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(115%);
+  display: none;
+  background-color: var(--color-neutral-white);
+  color: var(--color-neutral-gray-600);
+  padding: 1.4rem;
+  border-radius: 0.2rem;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.header-dropdown.visible {
+  cursor: default;
+}
+.header-dropdown.visible > .header-dropdown-options-container {
+  display: flex;
+  flex-direction: column;
 }
