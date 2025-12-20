@@ -81,11 +81,25 @@ a {
   font-family: var(--font-family-ubuntu-400);
 }
 .header-hero-wrapper {
-  background-image: linear-gradient(to bottom right, var(--hero-background-gradient));
+  position: relative;
+  background: linear-gradient(to right, var(--hero-background-gradient));
   height: 80vh;
   border-bottom-left-radius: 10rem;
   padding: 3.5rem var(--x-padding);
 }
+.header-hero-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/images/bg-pattern-intro-desktop.svg);
+  background-position-x: 25%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: 250%;
+}
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -150,6 +164,7 @@ a {
 .header-buttons > * {
   padding: 1rem 2.5rem;
   border-radius: 10rem;
+  z-index: 1;
 }
 .header-login-button {
   opacity: 0.9;

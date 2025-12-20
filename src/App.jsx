@@ -15,6 +15,7 @@ function App() {
   return (
     <>
       <div className="header-hero-wrapper">
+        <div className="header-hero-bg-pattern"></div>
         <Header visibleDropdownId={visibleDropdownId} toggle_visible_dropdown_id={toggle_visible_dropdown_id} />
       </div>
     </>
