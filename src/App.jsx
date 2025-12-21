@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Editor from "./components/Editor";
 import Speed from "./components/Speed";
 import Free from "./components/Free";
+import Footer from "./components/Footer";
 
 function App() {
   const [visibleDropdownId, setVisibleDropdownId] = useState(null);
@@ -26,6 +27,7 @@ function App() {
       <Editor />
       <Speed />
       <Free />
+      <Footer />
     </>
   );
 }
