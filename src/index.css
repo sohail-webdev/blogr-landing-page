@@ -280,6 +280,8 @@ li,
   background-image: url(./assets/images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
   background-position: top 80% left -60%;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
 }
 .section-speed-circle-illustration ~ * {
   position: relative;
@@ -494,5 +496,32 @@ li,
     max-width: unset;
     font-size: 1rem;
     line-height: 1.6rem;
+  }
+  /* Speed Info Section */
+  .section-speed {
+    height: fit-content;
+    margin-top: 8rem;
+  }
+  .section-speed-content-container {
+    flex-direction: column;
+  }
+  .section-speed-circle-illustration {
+    background-position-x: center;
+    background-position-y: -14rem;
+    background-size: 160%;
+  }
+  .section-speed-phone-illustration {
+    position: absolute;
+    top: 0;
+    transform: translateY(-40%);
+    width: 24rem;
+  }
+  .section-speed-content {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  .section-speed-content > p {
+    font-size: 1rem;
   }
 }
