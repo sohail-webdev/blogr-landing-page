@@ -279,6 +279,9 @@ a {
   position: relative;
   z-index: 1;
 }
+.section-speed-phone-illustration {
+  object-fit: contain;
+}
 .section-speed-content-container {
   position: relative;
   background-image: linear-gradient(to right, var(--body-background-gradient));
@@ -303,6 +306,47 @@ a {
 }
 .section-speed-content > p {
   font-size: 0.9rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+}
+
+/* Section Free */
+.section-free {
+  height: 100vh;
+  background-image: url(./assets/images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: -60%;
+  background-size: 65%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 var(--x-padding);
+}
+.section-free-content {
+  height: 50%;
+  width: 50%;
+}
+.section-free-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.section-free-content-sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-free-content-sub-section > h2 {
+  font-size: 1.5rem;
+  font-family: var(--font-family-ubuntu-400);
+  color: var(--color-primary-blue-900);
+  letter-spacing: 0.05rem;
+}
+.section-free-content-sub-section > p {
+  color: var(--color-neutral-gray-600);
+  max-width: 90%;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
   opacity: 0.8;
 }
