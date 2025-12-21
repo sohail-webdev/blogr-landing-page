@@ -219,7 +219,7 @@ li,
 
 /* Editor Section */
 .section-editor {
-  height: 50rem;
+  height: 52rem;
   color: var(--color-primary-blue-900);
   padding: 0 var(--x-padding);
   display: flex;
@@ -263,7 +263,7 @@ li,
 
 /* Speed Info Section */
 .section-speed {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
