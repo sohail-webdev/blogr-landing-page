@@ -524,4 +524,16 @@ li,
   .section-speed-content > p {
     font-size: 1rem;
   }
+  /* Section Free Info */
+  .section-free {
+    flex-direction: column;
+    background-image: url(./assets/images/illustration-laptop-mobile.svg);
+    background-position-x: center;
+    background-position-y: 15%;
+    background-size: 130%;
+    height: 55rem;
+  }
+  .section-free-content {
+    width: 100%;
+  }
 }
