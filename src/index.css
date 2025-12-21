@@ -129,17 +129,20 @@ li,
   align-items: center;
   gap: 0.4rem;
   cursor: initial;
+  padding-right: 1.25rem;
 }
 .header-dropdown > a {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  opacity: 0.9;
+  opacity: 0.8;
   gap: 0.6rem;
   cursor: pointer;
 }
 .header-dropdown-arrow-icon {
+  position: absolute;
+  right: 0;
   height: 0.6rem;
 }
 .header-dropdown-options-container {
@@ -177,7 +180,7 @@ li,
   opacity: 0.9;
 }
 .header-signup-button {
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 1);
   color: var(--color-primary-red-500);
   font-weight: bold;
 }
@@ -369,7 +372,7 @@ li,
   flex-direction: column;
   gap: 2rem;
 }
-.footer-nav-links-container p {
+.footer-nav-links-options-container p {
   cursor: pointer;
 }
 .footer-nav-links-options-container {
@@ -380,4 +383,46 @@ li,
 .footer-nav-links-options-container > p {
   font-size: 0.9rem;
   opacity: 0.6;
+}
+
+/* Hover */
+@media (pointer: fine) {
+  .header-dropdown > a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+  .header-dropdown-option > a:hover {
+    font-weight: bold;
+  }
+  .header-signup-button:hover,
+  .hero-buttons-container > .hero-primary-button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .hero-buttons-container > .hero-secondary-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--color-primary-red-500);
+  }
+  .footer-nav-links-options-container > p:hover {
+    text-decoration: underline;
+  }
+}
+.header-dropdown > a:active {
+  opacity: 1;
+  text-decoration: underline;
+}
+.header-dropdown-option > a:active {
+  font-weight: bold;
+}
+.header-signup-button:active,
+.hero-buttons-container > .hero-primary-button:active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.hero-buttons-container > .hero-secondary-button:active {
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--color-primary-red-500);
+}
+.footer-nav-links-options-container > p:active {
+  text-decoration: underline;
 }
