@@ -216,7 +216,7 @@ a {
 
 /* Editor Section */
 .section-editor {
-  height: 120vh;
+  height: 50rem;
   color: var(--color-primary-blue-900);
   padding: 0 var(--x-padding);
   display: flex;
@@ -312,7 +312,7 @@ a {
 
 /* Section Free */
 .section-free {
-  height: 100vh;
+  height: 45rem;
   background-image: url(./assets/images/illustration-laptop-desktop.svg);
   background-repeat: no-repeat;
   background-position-y: center;
@@ -359,6 +359,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   border-top-right-radius: 5rem;
+  margin-top: 10rem;
 }
 .footer-nav-links-container {
   display: flex;
