@@ -440,3 +440,42 @@ li,
 .footer-nav-links-options-container > p:active {
   text-decoration: underline;
 }
+
+/* Mobile */
+.toggle-navbar-button {
+  display: none;
+}
+@media (max-width: 1024px) {
+  #root {
+    --x-padding: 10vw;
+  }
+  .header-hero-wrapper {
+    background: linear-gradient(to bottom, var(--hero-background-gradient));
+  }
+  .header-hero-bg-pattern {
+    background-position-x: 35%;
+    background-position-y: 35%;
+    background-size: 350%;
+    background-image: url(./assets/images/bg-pattern-intro-mobile.svg);
+  }
+  .toggle-navbar-button {
+    display: block;
+  }
+  .header-nav-dropdowns-container,
+  .header-buttons {
+    display: none;
+  }
+  .logo {
+    height: 2rem;
+  }
+  .section-hero > h1,
+  .section-hero > p {
+    text-align: center;
+  }
+  .section-hero > h1 {
+    font-size: 2rem;
+  }
+  .hero-buttons-container > .button {
+    padding: 0.8rem 1.4rem;
+  }
+}

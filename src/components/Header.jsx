@@ -1,3 +1,5 @@
+import navbar_icon from "../assets/images/icon-navbar.svg";
+
 const dropdowns = [
   { id: 1, title: "Product", options: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"] },
   { id: 2, title: "Company", options: ["About", "Team", "Blog", "Careers"] },
@@ -44,6 +46,9 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id }
         <button className="button header-login-button">Login</button>
         <button className="button header-signup-button">Sign Up</button>
       </div>
+      <button className="button toggle-navbar-button">
+        <img src={navbar_icon} alt="" />
+      </button>
     </header>
   );
 }
