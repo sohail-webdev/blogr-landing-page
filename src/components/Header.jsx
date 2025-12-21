@@ -24,7 +24,7 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id }
                 onClick={toggle_visible_dropdown_id}
                 data-id={dropdown.id}
               >
-                <a>
+                <a className="header-dropdown-title">
                   {dropdown.title}
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 7" className="header-dropdown-arrow-icon">
                     <path fill="none" stroke="#FFF" strokeWidth="2" opacity=".75" d="M1 1l4 4 4-4" />
