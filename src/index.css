@@ -448,6 +448,7 @@ li,
 @media (max-width: 1024px) {
   #root {
     --x-padding: 10vw;
+    text-align: center;
   }
   .header-hero-wrapper {
     background: linear-gradient(to bottom, var(--hero-background-gradient));
@@ -468,14 +469,30 @@ li,
   .logo {
     height: 2rem;
   }
-  .section-hero > h1,
-  .section-hero > p {
-    text-align: center;
-  }
   .section-hero > h1 {
     font-size: 2rem;
   }
   .hero-buttons-container > .button {
     padding: 0.8rem 1.4rem;
+  }
+  /* Editor Info Section */
+  .section-editor {
+    background-position-y: 16%;
+    background-position-x: 50%;
+    background-size: 100%;
+    background-image: url(./assets/images/illustration-editor-mobile.svg);
+    gap: 24rem;
+    height: 78rem;
+  }
+  .section-editor > h2 {
+    font-size: 1.8rem;
+  }
+  .editor-content-sub-section {
+    align-items: center;
+  }
+  .editor-content-sub-section > p {
+    max-width: unset;
+    font-size: 1rem;
+    line-height: 1.6rem;
   }
 }
