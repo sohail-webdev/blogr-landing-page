@@ -385,6 +385,18 @@ li,
   opacity: 0.6;
 }
 
+/* Transition */
+.header-dropdown > a {
+  transition: opacity 0.25s ease;
+}
+.header-signup-button,
+.hero-buttons-container > .hero-primary-button {
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+.hero-buttons-container > .hero-secondary-button {
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
 /* Hover */
 @media (pointer: fine) {
   .header-dropdown > a:hover {
@@ -407,6 +419,8 @@ li,
     text-decoration: underline;
   }
 }
+
+/* Active */
 .header-dropdown > a:active {
   opacity: 1;
   text-decoration: underline;
