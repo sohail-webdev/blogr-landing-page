@@ -61,9 +61,6 @@ ul {
   list-style: none;
 }
 li,
-a {
-  cursor: pointer;
-}
 .button {
   background: none;
   outline: none;
@@ -100,9 +97,8 @@ a {
   background-size: 250%;
   border-bottom-left-radius: 5rem;
 }
-.header-hero-bg-pattern ~ * {
+.header-hero-bg-pattern ~ *:not(.section-hero) {
   position: relative;
-  z-index: 1;
 }
 /* Header */
 .header {
@@ -132,6 +128,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
+  cursor: initial;
 }
 .header-dropdown > a {
   display: flex;
@@ -140,6 +137,7 @@ a {
   font-size: 0.9rem;
   opacity: 0.9;
   gap: 0.6rem;
+  cursor: pointer;
 }
 .header-dropdown-arrow-icon {
   height: 0.6rem;
@@ -148,20 +146,24 @@ a {
   position: absolute;
   bottom: 0;
   transform: translateY(115%);
-  display: none;
+  display: flex;
+  visibility: hidden;
   background-color: var(--color-neutral-white);
   color: var(--color-neutral-gray-600);
   padding: 1.4rem;
   border-radius: 0.2rem;
   gap: 1rem;
   font-size: 0.8rem;
-}
-.header-dropdown.visible {
-  cursor: default;
+  pointer-events: none;
+  z-index: 1;
 }
 .header-dropdown.visible > .header-dropdown-options-container {
-  display: flex;
+  visibility: visible;
   flex-direction: column;
+  pointer-events: all;
+}
+.header-dropdown-option > a {
+  cursor: pointer;
 }
 .header-buttons {
   display: flex;
@@ -181,6 +183,7 @@ a {
 }
 /* Hero Section */
 .section-hero {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
