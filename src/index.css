@@ -131,6 +131,9 @@ li,
   cursor: initial;
   padding-right: 1.25rem;
 }
+.header-dropdown-title {
+  user-select: none;
+}
 .header-dropdown > a {
   display: flex;
   justify-content: center;
