@@ -114,7 +114,7 @@ li,
 }
 /* Header */
 .logo {
-  height: 3rem;
+  height: 2.5rem;
 }
 .header-dropdowns-container {
   display: flex;
@@ -147,6 +147,7 @@ li,
   position: absolute;
   right: 0;
   height: 0.6rem;
+  pointer-events: none;
 }
 .header-dropdown.visible .header-dropdown-arrow-icon {
   transform: rotate(-180deg);
@@ -176,12 +177,12 @@ li,
 }
 .header-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 .header-buttons > * {
-  padding: 1rem 2.5rem;
   border-radius: 10rem;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 .header-login-button {
   opacity: 0.9;
@@ -190,6 +191,7 @@ li,
   background-color: rgba(255, 255, 255, 1);
   color: var(--color-primary-red-500);
   font-weight: bold;
+  padding: 0.8rem 2rem;
 }
 /* Hero Section */
 .section-hero {
@@ -214,7 +216,7 @@ li,
   gap: 1rem;
 }
 .hero-buttons-container > .button {
-  padding: 1rem 1.6rem;
+  padding: 0.8rem 1.2rem;
   border: 0.1rem solid transparent;
   border-radius: 10rem;
   font-weight: bold;
@@ -236,7 +238,7 @@ li,
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
   background-image: url(./assets/images/illustration-editor-desktop.svg);
   background-repeat: no-repeat;
   background-position: bottom 100% right -50%;
@@ -273,7 +275,7 @@ li,
 
 /* Speed Info Section */
 .section-speed {
-  height: 70vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,7 +302,7 @@ li,
 .section-speed-content-container {
   position: relative;
   background-image: linear-gradient(to right, var(--body-background-gradient));
-  height: 50%;
+  height: 75%;
   border-top-right-radius: 5rem;
   border-bottom-left-radius: 5rem;
   display: flex;
@@ -354,7 +356,7 @@ li,
 }
 .section-free-content-sub-section > h2 {
   font-size: 1.5rem;
-  font-family: var(--font-family-ubuntu-400);
+  font-family: var(--font-family-overpass-600);
   color: var(--color-primary-blue-900);
   letter-spacing: 0.05rem;
 }
@@ -379,7 +381,7 @@ li,
 .footer-nav-links-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 .footer-nav-links-container > p {
   font-size: 1.2rem;
@@ -580,12 +582,13 @@ li,
   color: var(--color-primary-blue-900);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 4rem;
+  align-items: flex-start;
+  padding-top: 6rem;
   pointer-events: none;
 }
 .mobile-navbar {
-  height: 85%;
+  height: fit-content;
+  min-height: 60%;
   width: 80%;
   background-color: var(--color-neutral-white);
   box-shadow: 0 0.1rem 1rem 0.1rem rgba(0, 0, 0, 0.2);
@@ -639,7 +642,7 @@ li,
   flex-direction: column;
   align-items: center;
   width: 90%;
-  gap: unset;
+  gap: 1rem;
 }
 .mobile-navbar .header-buttons > * {
   width: fit-content;
@@ -652,5 +655,5 @@ li,
   height: 0.05rem;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
