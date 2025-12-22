@@ -145,6 +145,9 @@ li,
   right: 0;
   height: 0.6rem;
 }
+.header-dropdown.visible .header-dropdown-arrow-icon {
+  transform: rotate(-180deg);
+}
 .header-dropdown-options-container {
   position: absolute;
   bottom: 0;
@@ -404,6 +407,9 @@ li,
 }
 .mobile-navbar {
   transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.header-dropdown-arrow-icon {
+  transition: transform 0.25s ease;
 }
 
 /* Hover */
