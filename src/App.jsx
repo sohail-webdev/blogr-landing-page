@@ -5,9 +5,15 @@ import Editor from "./components/Editor";
 import Speed from "./components/Speed";
 import Free from "./components/Free";
 import Footer from "./components/Footer";
+import MobileNavbar from "./components/MobileNavbar";
 
 function App() {
   const [visibleDropdownId, setVisibleDropdownId] = useState(null);
+  const [isMobileNavbarVisible, setIsMobileNavbarVisible] = useState(false);
+
+  const toggle_mobile_navbar_visibility = useCallback(() => {
+    setIsMobileNavbarVisible(is_visible => !is_visible);
+  }, []);
 
   const toggle_visible_dropdown_id = useCallback(
     event => {
@@ -32,13 +38,23 @@ function App() {
     <>
       <div className="header-hero-wrapper">
         <div className="header-hero-bg-pattern"></div>
-        <Header visibleDropdownId={visibleDropdownId} toggle_visible_dropdown_id={toggle_visible_dropdown_id} />
+        <Header
+          visibleDropdownId={visibleDropdownId}
+          toggle_visible_dropdown_id={toggle_visible_dropdown_id}
+          isMobileNavbarVisible={isMobileNavbarVisible}
+          toggle_mobile_navbar_visibility={toggle_mobile_navbar_visibility}
+        />
         <Hero />
       </div>
       <Editor />
       <Speed />
       <Free />
       <Footer />
+      <MobileNavbar
+        toggle_visible_dropdown_id={toggle_visible_dropdown_id}
+        visibleDropdownId={visibleDropdownId}
+        isMobileNavbarVisible={isMobileNavbarVisible}
+      />
     </>
   );
 }

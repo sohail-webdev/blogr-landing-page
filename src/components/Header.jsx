@@ -1,4 +1,5 @@
 import navbar_icon from "../assets/images/icon-navbar.svg";
+import close_icon from "../assets/images/icon-close.svg";
 
 const dropdowns = [
   { id: 1, title: "Product", options: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"] },
@@ -6,7 +7,7 @@ const dropdowns = [
   { id: 3, title: "Connect", options: ["Contact", "Newsletter", "LinkedIn"] },
 ];
 
-export default function Header({ visibleDropdownId, toggle_visible_dropdown_id }) {
+export default function Header({ visibleDropdownId, toggle_visible_dropdown_id, isMobileNavbarVisible, toggle_mobile_navbar_visibility }) {
   return (
     <header className="header">
       <div className="header-logo-dropdowns-wrapper">
@@ -46,8 +47,8 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id }
         <button className="button header-login-button">Login</button>
         <button className="button header-signup-button">Sign Up</button>
       </div>
-      <button className="button toggle-navbar-button">
-        <img src={navbar_icon} alt="" />
+      <button className="button toggle-navbar-button" onClick={toggle_mobile_navbar_visibility}>
+        <img src={isMobileNavbarVisible ? close_icon : navbar_icon} alt="" />
       </button>
     </header>
   );
