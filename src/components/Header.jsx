@@ -29,11 +29,15 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id, 
               >
                 <a className="header-dropdown-title">{dropdown.title}</a>
                 <ul className="header-dropdown-options-container">
-                  {dropdown.options.map(option => (
-                    <li className="header-dropdown-option" key={option}>
-                      <a>{option}</a>
-                    </li>
-                  ))}
+                  <div className="header-dropdown-options-wrapper-container">
+                    <div className="header-dropdown-options-wrapper">
+                      {dropdown.options.map(option => (
+                        <li className="header-dropdown-option" key={option}>
+                          <a>{option}</a>
+                        </li>
+                      ))}
+                    </div>
+                  </div>
                 </ul>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 7" className="header-dropdown-arrow-icon">
                   <path fill="none" stroke="#FFF" strokeWidth="2" opacity=".75" d="M1 1l4 4 4-4" />
