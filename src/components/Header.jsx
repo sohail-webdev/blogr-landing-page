@@ -1,5 +1,5 @@
-import navbar_icon from "../assets/images/icon-navbar.svg";
-import close_icon from "../assets/images/icon-close.svg";
+import { useState, useEffect, useCallback } from "react";
+import MobileNavbar from "./MobileNavbar";
 
 const dropdowns = [
   { id: 1, title: "Product", options: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"] },
@@ -7,7 +7,19 @@ const dropdowns = [
   { id: 3, title: "Connect", options: ["Contact", "Newsletter", "LinkedIn"] },
 ];
 
-export default function Header({ visibleDropdownId, toggle_visible_dropdown_id, isMobileNavbarVisible, toggle_mobile_navbar_visibility }) {
+export default function Header() {
+  const [visibleDropdownId, setVisibleDropdownId] = useState(null);
+
+  const handle_outside_dropdown_click = useCallback(event => {
+    const dropdown_element = event.target.closest(".header-dropdown");
+    if (dropdown_element === null) setVisibleDropdownId(null);
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("click", handle_outside_dropdown_click);
+    return () => document.removeEventListener("click", handle_outside_dropdown_click);
+  }, [handle_outside_dropdown_click]);
+
   return (
     <header className="header">
       <div className="header-logo-dropdowns-wrapper">
@@ -24,8 +36,7 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id, 
               <li
                 className={`header-dropdown${visibleDropdownId && dropdown.id === visibleDropdownId ? " visible" : ""}`}
                 key={dropdown.title}
-                onClick={toggle_visible_dropdown_id}
-                data-id={dropdown.id}
+                onClick={() => setVisibleDropdownId(dropdown.id)}
               >
                 <a className="header-dropdown-title">{dropdown.title}</a>
                 <ul className="header-dropdown-options-container">
@@ -51,9 +62,7 @@ export default function Header({ visibleDropdownId, toggle_visible_dropdown_id, 
         <button className="button header-login-button">Login</button>
         <button className="button header-signup-button">Sign Up</button>
       </div>
-      <button className="button toggle-navbar-button" onClick={toggle_mobile_navbar_visibility}>
-        <img src={isMobileNavbarVisible ? close_icon : navbar_icon} alt="" />
-      </button>
+      <MobileNavbar />
     </header>
   );
 }

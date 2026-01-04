@@ -585,7 +585,7 @@ li,
 }
 /* Mobile Navbar */
 .mobile-navbar-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -594,10 +594,11 @@ li,
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 6rem;
+  padding-top: 3rem;
   pointer-events: none;
 }
 .mobile-navbar {
+  position: fixed;
   height: fit-content;
   min-height: 60%;
   width: 80%;
@@ -612,6 +613,7 @@ li,
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10%);
+  z-index: 100;
 }
 .mobile-navbar .header-nav-dropdowns-container {
   width: 100%;
@@ -654,6 +656,7 @@ li,
   width: 100%;
 }
 .mobile-navbar .header-buttons {
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
