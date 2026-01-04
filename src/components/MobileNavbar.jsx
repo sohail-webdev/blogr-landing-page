@@ -23,11 +23,15 @@ const MobileNavbar = ({ toggle_visible_dropdown_id, visibleDropdownId, isMobileN
                 </svg>
               </a>
               <ul className="header-dropdown-options-container">
-                {dropdown.options.map(option => (
-                  <li className="header-dropdown-option" key={option}>
-                    <a>{option}</a>
-                  </li>
-                ))}
+                <div className="header-dropdown-options-wrapper-container">
+                  <div className="header-dropdown-options-wrapper">
+                    {dropdown.options.map(option => (
+                      <li className="header-dropdown-option" key={option}>
+                        <a>{option}</a>
+                      </li>
+                    ))}
+                  </div>
+                </div>
               </ul>
             </li>
           ))}
